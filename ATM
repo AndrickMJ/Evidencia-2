@@ -1,0 +1,724 @@
+// 
+using System;
+namespace ATM
+{
+    public class main_class
+    {
+
+        public static void Main(string[] args)
+        {
+            int saldo4;
+            int tarjetaTrans;
+            int saldo3;
+            long tarjeta1;
+            int servicioT;
+            int retiro;
+            string pin2;
+            int billetes;
+            long tarjeta4;
+            int saldo2;
+            long tarjeta3;
+            int transaccion;
+            int tarjetaX;
+            string pinX;
+            string pin1;
+            int deposito;
+            string pin3;
+            string pin4;
+            int saldo1;
+            long tarjeta2;
+            string? rltmp;
+            var now = DateTime.Now;
+            DateTime fechaExpiracion1;
+            DateTime fechaExpiracion2;
+            DateTime fechaExpiracion3;
+            DateTime fechaExpiracion4;
+
+            Console.WriteLine("Escoge la tarjeta que quieres usar?");
+            tarjetaX = (int)Convert.ToInt64 (Console.ReadLine());
+            Console.WriteLine("Que servicio quieres usar?");
+            servicioT = Convert.ToInt32(Console.ReadLine());
+
+            tarjeta1 = 4242424242424240;
+            pin1 = "001";
+            saldo1 = 1000;
+            tarjeta2 = 4000056655665550;
+            pin2 = "200";
+            saldo2 = 2000;
+            tarjeta3 = 5555555555554440;
+            pin3 = "303";
+            saldo3 = 3000;
+            tarjeta4 = 2223003122003220;
+            pin4 = "040";
+            saldo4 = 4000;
+            if (!(servicioT == 2) && !(servicioT == 3) && !(servicioT == 4))
+            {
+                if (!(tarjetaX == tarjeta2) && !(tarjetaX == tarjeta3) && !(tarjetaX == tarjeta4))
+                {
+
+                    Console.WriteLine("Cual es tu pin?");
+
+                    rltmp = Console.ReadLine();
+                    if (rltmp == null)
+                    {
+                        pinX = "000";
+                    } else
+                    {
+                        pinX = rltmp;
+                    }
+                    if (pinX == pin1)
+                    {
+                        Console.WriteLine("Cantidad que desea retirar");
+                        retiro = Convert.ToInt32(Console.ReadLine());
+                        if (retiro < saldo1)
+                        {
+                            saldo1 = saldo1 - retiro;
+                            Console.WriteLine("Le quedan $" + saldo1 + " en su cuenta");
+                        }
+                        else
+                        {
+                            Console.WriteLine("ERROR");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("ERROR");
+                    }
+                }
+                else
+                {
+                    if (!(tarjetaX == tarjeta1) && !(tarjetaX == tarjeta3) && !(tarjetaX == tarjeta4))
+                    {
+                        Console.WriteLine("Cual es tu pin?");
+                        rltmp = Console.ReadLine();
+                        if (rltmp == null)
+                        {
+                            pinX = "000";
+                        }
+                        else
+                        {
+                            pinX = rltmp;
+                        }
+                        if (pinX == pin2)
+                        {
+                            Console.WriteLine("Cantidad que desea retirar");
+                            retiro = Convert.ToInt32(Console.ReadLine());
+                            if (retiro < saldo2)
+                            {
+                                saldo2 = saldo2 - retiro;
+                                Console.WriteLine("Le quedan $" + saldo2 + " en su cuenta");
+                            }
+                            else
+                            {
+                                Console.WriteLine("ERROR");
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("ERROR");
+                        }
+                    }
+                    else
+                    {
+                        if (!(tarjetaX == tarjeta2) && !(tarjetaX == tarjeta1) && !(tarjetaX == tarjeta4))
+                        {
+                            Console.WriteLine("Cual es tu pin?");
+                            rltmp = Console.ReadLine();
+                            if (rltmp == null)
+                            {
+                                pinX = "000";
+                            }
+                            else
+                            {
+                                pinX = rltmp;
+                            }
+                            if (pinX == pin3)
+                            {
+                                Console.WriteLine("Cantidad que desea retirar");
+                                retiro = Convert.ToInt32(Console.ReadLine());
+                                if (retiro < saldo3)
+                                {
+                                    saldo3 = saldo3 - retiro;
+                                    Console.WriteLine("Le quedan $" + saldo3 + " en su cuenta");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("ERROR");
+                                }
+                            }
+                            else
+                            {
+                                Console.WriteLine("ERROR");
+                            }
+                        }
+                        else
+                        {
+                            if (!(tarjetaX == tarjeta2) && !(tarjetaX == tarjeta3) && !(tarjetaX == tarjeta1))
+                            {
+                                Console.WriteLine("Cual es tu pin?");
+                                rltmp = Console.ReadLine();
+                                if (rltmp == null)
+                                {
+                                    pinX = "000";
+                                }
+                                else
+                                {
+                                    pinX = rltmp;
+                                }
+                                if (pinX == pin4)
+                                {
+                                    Console.WriteLine("Cantidad que desea retirar");
+                                    retiro = Convert.ToInt32(Console.ReadLine());
+                                    if (retiro < saldo4)
+                                    {
+                                        saldo4 = saldo4 - retiro;
+                                        Console.WriteLine("Le quedan $" + saldo4 + " en su cuenta");
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("ERROR");
+                                    }
+                                }
+                                else
+                                {
+                                    Console.WriteLine("ERROR");
+                                }
+                            }
+                            else
+                            {
+                                Console.WriteLine("ERROR");
+                            }
+                        }
+                    }
+                }
+            }
+            else
+            {
+                if (!(servicioT == 1) && !(servicioT == 3) && !(servicioT == 4))
+                {
+                    while (true)
+                    {
+                        Console.WriteLine("A que cuenta quieres transferir?");
+                        tarjetaTrans = (int)Convert.ToInt64(Console.ReadLine());
+                        if (!(tarjetaTrans == tarjeta2) && !(tarjetaTrans == tarjeta3) && !(tarjetaTrans == tarjeta4))
+                        {
+                            if (!(tarjetaX == tarjeta2) && !(tarjetaX == tarjeta3) && !(tarjetaX == tarjeta4))
+                            {
+                                Console.WriteLine("No puede transferir a su propia cuenta");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Cuanto desea transferir?");
+                                transaccion = Convert.ToInt32(Console.ReadLine());
+                                if (!(tarjetaX == tarjeta1) && !(tarjetaX == tarjeta3) && !(tarjetaX == tarjeta4))
+                                {
+                                    if (transaccion < saldo2)
+                                    {
+                                        saldo2 = saldo2 - transaccion;
+                                        saldo1 = saldo1 + transaccion;
+                                        Console.WriteLine("Usted envio $" + transaccion + " a Juan Montes");
+                                        Console.WriteLine("Su cuenta ahora tiene $" + saldo2);
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("ERROR");
+                                    }
+                                }
+                                else
+                                {
+                                    if (!(tarjetaX == tarjeta2) && !(tarjetaX == tarjeta1) && !(tarjetaX == tarjeta4))
+                                    {
+                                        if (transaccion < saldo3)
+                                        {
+                                            saldo3 = saldo3 - transaccion;
+                                            saldo1 = saldo1 + transaccion;
+                                            Console.WriteLine("Usted envio $" + transaccion + " a Juan Montes");
+                                            Console.WriteLine("Su cuenta ahora tiene $" + saldo3);
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine("ERROR");
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if (!(tarjetaX == tarjeta2) && !(tarjetaX == tarjeta3) && !(tarjetaX == tarjeta1))
+                                        {
+                                            if (transaccion < saldo4)
+                                            {
+                                                saldo4 = saldo4 - transaccion;
+                                                saldo1 = saldo1 + transaccion;
+                                                Console.WriteLine("Usted envio $" + transaccion + " a Juan Montes");
+                                                Console.WriteLine("Su cuenta ahora tiene $" + saldo4);
+                                            }
+                                            else
+                                            {
+                                                Console.WriteLine("ERROR");
+                                            }
+                                        }
+                                        else
+                                        {
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        else
+                        {
+                            if (!(tarjetaTrans == tarjeta1) && !(tarjetaTrans == tarjeta3) && !(tarjetaTrans == tarjeta4))
+                            {
+                                if (!(tarjetaX == tarjeta1) && !(tarjetaX == tarjeta3) && !(tarjetaX == tarjeta4))
+                                {
+                                    Console.WriteLine("No puede transferir a su propia cuenta");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Cuanto desea transferir?");
+                                    transaccion = Convert.ToInt32(Console.ReadLine());
+                                    if (!(tarjetaX == tarjeta2) && !(tarjetaX == tarjeta3) && !(tarjetaX == tarjeta4))
+                                    {
+                                        if (transaccion < saldo1)
+                                        {
+                                            saldo1 = saldo1 - transaccion;
+                                            saldo2 = saldo2 + transaccion;
+                                            Console.WriteLine("Usted envio $" + transaccion + " a Pedro Zapata");
+                                            Console.WriteLine("Su cuenta ahora tiene $" + saldo2);
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine("ERROR");
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if (!(tarjetaX == tarjeta2) && !(tarjetaX == tarjeta1) && !(tarjetaX == tarjeta4))
+                                        {
+                                            if (transaccion < saldo3)
+                                            {
+                                                saldo3 = saldo3 - transaccion;
+                                                saldo2 = saldo2 + transaccion;
+                                                Console.WriteLine("Usted envio $" + transaccion + " a Pedro Zapata");
+                                                Console.WriteLine("Su cuenta ahora tiene $" + saldo3);
+                                            }
+                                            else
+                                            {
+                                                Console.WriteLine("ERROR");
+                                            }
+                                        }
+                                        else
+                                        {
+                                            if (!(tarjetaX == tarjeta2) && !(tarjetaX == tarjeta3) && !(tarjetaX == tarjeta1))
+                                            {
+                                                if (transaccion < saldo4)
+                                                {
+                                                    saldo4 = saldo4 - transaccion;
+                                                    saldo2 = saldo2 + transaccion;
+                                                    Console.WriteLine("Usted envio $" + transaccion + " a Pedro Zapata");
+                                                    Console.WriteLine("Su cuenta ahora tiene $" + saldo4);
+                                                }
+                                                else
+                                                {
+                                                    Console.WriteLine("ERROR");
+                                                }
+                                            }
+                                            else
+                                            {
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                if (!(tarjetaTrans == tarjeta2) && !(tarjetaTrans == tarjeta1) && !(tarjetaTrans == tarjeta4))
+                                {
+                                    if (!(tarjetaX == tarjeta2) && !(tarjetaX == tarjeta1) && !(tarjetaX == tarjeta4))
+                                    {
+                                        Console.WriteLine("No puede transferir a su propia cuenta");
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Cuanto desea transferir?");
+                                        transaccion = Convert.ToInt32(Console.ReadLine());
+                                        if (!(tarjetaX == tarjeta1) && !(tarjetaX == tarjeta3) && !(tarjetaX == tarjeta4))
+                                        {
+                                            if (transaccion < saldo2)
+                                            {
+                                                saldo2 = saldo2 - transaccion;
+                                                saldo3 = saldo3 + transaccion;
+                                                Console.WriteLine("Usted envio $" + transaccion + " a Ana Martínez");
+                                                Console.WriteLine("Su cuenta ahora tiene $" + saldo2);
+                                            }
+                                            else
+                                            {
+                                                Console.WriteLine("ERROR");
+                                            }
+                                        }
+                                        else
+                                        {
+                                            if (!(tarjetaX == tarjeta2) && !(tarjetaX == tarjeta3) && !(tarjetaX == tarjeta4))
+                                            {
+                                                if (transaccion < saldo1)
+                                                {
+                                                    saldo1 = saldo1 - transaccion;
+                                                    saldo3 = saldo3 + transaccion;
+                                                    Console.WriteLine("Usted envio $" + transaccion + " a Ana Martínez");
+                                                    Console.WriteLine("Su cuenta ahora tiene $" + saldo3);
+                                                }
+                                                else
+                                                {
+                                                    Console.WriteLine("ERROR");
+                                                }
+                                            }
+                                            else
+                                            {
+                                                if (!(tarjetaX == tarjeta2) && !(tarjetaX == tarjeta3) && !(tarjetaX == tarjeta1))
+                                                {
+                                                    if (transaccion < saldo4)
+                                                    {
+                                                        saldo4 = saldo4 - transaccion;
+                                                        saldo3 = saldo3 + transaccion;
+                                                        Console.WriteLine("Usted envio $" + transaccion + " a Ana Martínez");
+                                                        Console.WriteLine("Su cuenta ahora tiene $" + saldo4);
+                                                    } 
+                                                    else
+                                                    {
+                                                        Console.WriteLine("ERROR");
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    if (!(tarjetaTrans == tarjeta2) && !(tarjetaTrans == tarjeta3) && !(tarjetaTrans == tarjeta1))
+                                    {
+                                        if (!(tarjetaX == tarjeta2) && !(tarjetaX == tarjeta3) && !(tarjetaX == tarjeta1))
+                                        {
+                                            Console.WriteLine("No puede transferir a su propia cuenta");
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine("Cuanto desea transferir?");
+                                            transaccion = Convert.ToInt32(Console.ReadLine());
+                                            if (!(tarjetaX == tarjeta1) && !(tarjetaX == tarjeta3) && !(tarjetaX == tarjeta4))
+                                            {
+                                                if (transaccion < saldo2)
+                                                {
+                                                    saldo2 = saldo2 - transaccion;
+                                                    saldo4 = saldo4 + transaccion;
+                                                    Console.WriteLine("Usted envio $" + transaccion + " a Rogelio Guerra");
+                                                    Console.WriteLine("Su cuenta ahora tiene $" + saldo2);
+                                                }
+                                                else
+                                                {
+                                                    Console.WriteLine("ERROR");
+                                                }
+                                            }
+                                            else
+                                            {
+                                                if (!(tarjetaX == tarjeta2) && !(tarjetaX == tarjeta1) && !(tarjetaX == tarjeta4))
+                                                {
+                                                    if (transaccion < saldo3)
+                                                    {
+                                                        saldo3 = saldo3 - transaccion;
+                                                        saldo4 = saldo4 + transaccion;
+                                                        Console.WriteLine("Usted envio $" + transaccion + " a Rogelio Guerra");
+                                                        Console.WriteLine("Su cuenta ahora tiene $" + saldo3);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.WriteLine("ERROR");
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    if (!(tarjetaX == tarjeta2) && !(tarjetaX == tarjeta3) && !(tarjetaX == tarjeta4))
+                                                    {
+                                                        if (transaccion < saldo1)
+                                                        {
+                                                            saldo1 = saldo1 - transaccion;
+                                                            saldo4 = saldo4 + transaccion;
+                                                            Console.WriteLine("Usted envio $" + transaccion + " a Rogelio Guerra");
+                                                            Console.WriteLine("Su cuenta ahora tiene $" + saldo4);
+                                                        }
+                                                        else
+                                                        {
+                                                            Console.WriteLine("ERROR");
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("ERROR");
+                                    }
+                                }
+                            }
+                        }
+                        if (2 == 2) break;
+                    }
+                }
+                else
+                {
+                    if (!(servicioT == 2) && !(servicioT == 1) && !(servicioT == 4))
+                    {
+                        if (!(tarjetaX == tarjeta2) && !(tarjetaX == tarjeta3) && !(tarjetaX == tarjeta4))
+                        {
+                            while (true)
+                            {
+                                Console.WriteLine("Cuanto desea depositar?");
+                                deposito = Convert.ToInt32(Console.ReadLine());
+                                Console.WriteLine("Por favor introdusca billetes");
+                                billetes = Convert.ToInt32(Console.ReadLine());
+                                if (billetes == deposito) break;
+                            }
+                            if (deposito < saldo1)
+                            {
+                                saldo1 = saldo1 + deposito;
+                                Console.WriteLine("Usted tiene $" + saldo1 + " en su cuenta");
+                            }
+                            else
+                            {
+                                Console.WriteLine("ERROR");
+                            }
+                        }
+                        else
+                        {
+                            if (!(tarjetaX == tarjeta1) && !(tarjetaX == tarjeta3) && !(tarjetaX == tarjeta4))
+                            {
+                                while (true)
+                                {
+                                    Console.WriteLine("Cuanto desea depositar?");
+                                    deposito = Convert.ToInt32(Console.ReadLine());
+                                    Console.WriteLine("Por favor introdusca billetes");
+                                    billetes = Convert.ToInt32(Console.ReadLine());
+                                    if (billetes == deposito) break;
+                                }
+                                if (deposito < saldo2)
+                                {
+                                    saldo2 = saldo2 + deposito;
+                                    Console.WriteLine("Usted tiene $" + saldo2 + " en su cuenta");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("ERROR");
+                                }
+                            }
+                            else
+                            {
+                                if (!(tarjetaX == tarjeta2) && !(tarjetaX == tarjeta1) && !(tarjetaX == tarjeta4))
+                                {
+                                    while (true)
+                                    {
+                                        Console.WriteLine("Cuanto desea depositar?");
+                                        deposito = Convert.ToInt32(Console.ReadLine());
+                                        Console.WriteLine("Por favor introdusca billetes");
+                                        billetes = Convert.ToInt32(Console.ReadLine());
+                                        if (billetes == deposito) break;
+                                    }
+                                    if (deposito < saldo3)
+                                    {
+                                        saldo3 = saldo3 + deposito;
+                                        Console.WriteLine("Usted tiene $" + saldo3 + " en su cuenta");
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("ERROR");
+                                    }
+                                }
+                                else
+                                {
+                                    if (!(tarjetaX == tarjeta2) && !(tarjetaX == tarjeta3) && !(tarjetaX == tarjeta1))
+                                    {
+                                        while (true)
+                                        {
+                                            Console.WriteLine("Cuanto desea depositar?");
+                                            deposito = Convert.ToInt32(Console.ReadLine());
+                                            Console.WriteLine("Por favor introdusca billetes");
+                                            billetes = Convert.ToInt32(Console.ReadLine());
+                                            if (billetes == deposito) break;
+                                        }
+                                        if (deposito < saldo4)
+                                        {
+                                            saldo4 = saldo4 + deposito;
+                                            Console.WriteLine("Usted tiene $" + saldo4 + " en su cuenta");
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine("ERROR");
+                                        }
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("ERROR");
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        if (!(servicioT == 2) && !(servicioT == 3) && !(servicioT == 1))
+                        {
+                            if (!(tarjetaX == tarjeta2) && !(tarjetaX == tarjeta3) && !(tarjetaX == tarjeta4))
+                            {
+                                Console.WriteLine("Cual es tu pin?");
+                                rltmp = Console.ReadLine();
+                                if (rltmp == null)
+                                {
+                                    pinX = "000";
+                                }
+                                else
+                                {
+                                    pinX = rltmp;
+                                }
+                                if (!(pinX == pin2) && !(pinX == pin3) && !(pinX == pin4))
+                                {
+                                    Console.WriteLine("Fecha de expiracion");
+#pragma warning disable CS8604 // Possible null reference argument.
+                                    fechaExpiracion1 = DateTime.Parse(Console.ReadLine());
+#pragma warning restore CS8604 // Possible null reference argument.
+                                    if (fechaExpiracion1 > now)
+                                    {
+                                        Console.WriteLine("Su saldo es $" + saldo1);
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Su plástico ha vencido, pase a ventanilla para obtener uno nuevo");
+                                    }
+                                }
+                                else
+                                {
+                                    Console.WriteLine("ERROR");
+                                }
+                            }
+                            else
+                            {
+                                if (!(tarjetaX == tarjeta1) && !(tarjetaX == tarjeta3) && !(tarjetaX == tarjeta4))
+                                {
+                                    Console.WriteLine("Cual es tu pin?");
+                                    rltmp = Console.ReadLine();
+                                    if (rltmp == null)
+                                    {
+                                        pinX = "000";
+                                    }
+                                    else
+                                    {
+                                        pinX = rltmp;
+                                    }
+                                    if (!(pinX == pin1) && !(pinX == pin3) && !(pinX == pin4))
+                                    {
+                                        Console.WriteLine("Fecha de expiracion");
+#pragma warning disable CS8604 // Possible null reference argument.
+                                        fechaExpiracion2 = DateTime.Parse(Console.ReadLine());
+#pragma warning restore CS8604 // Possible null reference argument.
+                                        if (fechaExpiracion2 > now)
+                                        {
+                                            Console.WriteLine("Su saldo es $" + saldo2);
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine("Su plástico ha vencido, pase a ventanilla para obtener uno nuevo");
+                                        }
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("ERROR");
+                                    }
+                                }
+                                else
+                                {
+                                    if (!(tarjetaX == tarjeta2) && !(tarjetaX == tarjeta1) && !(tarjetaX == tarjeta4))
+                                    {
+                                        Console.WriteLine("Cual es tu pin?");
+                                        rltmp = Console.ReadLine();
+                                        if (rltmp == null)
+                                        {
+                                            pinX = "000";
+                                        }
+                                        else
+                                        {
+                                            pinX = rltmp;
+                                        }
+                                        if (!(pinX == pin2) && !(pinX == pin1) && !(pinX == pin4))
+                                        {
+                                            Console.WriteLine("Fecha de expiracion");
+#pragma warning disable CS8604 // Possible null reference argument.
+                                            fechaExpiracion3 = DateTime.Parse(Console.ReadLine());
+#pragma warning restore CS8604 // Possible null reference argument.
+                                            if (fechaExpiracion3 > now)
+                                            {
+                                                Console.WriteLine("Su saldo es $" + saldo3);
+                                            }
+                                            else
+                                            {
+                                                Console.WriteLine("Su plástico ha vencido, pase a ventanilla para obtener uno nuevo");
+                                            }
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine("ERROR");
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if (!(tarjetaX == tarjeta2) && !(tarjetaX == tarjeta3) && !(tarjetaX == tarjeta1))
+                                        {
+                                            Console.WriteLine("Cual es tu pin?");
+                                            rltmp = Console.ReadLine();
+                                            if (rltmp == null)
+                                            {
+                                                pinX = "000";
+                                            }
+                                            else
+                                            {
+                                                pinX = rltmp;
+                                            }
+                                            if (!(pinX == pin2) && !(pinX == pin3) && !(pinX == pin1))
+                                            {
+                                                Console.WriteLine("Fecha de expiracion");
+#pragma warning disable CS8604 // Possible null reference argument.
+                                                fechaExpiracion4 = DateTime.Parse(Console.ReadLine());
+#pragma warning restore CS8604 // Possible null reference argument.
+                                                if (fechaExpiracion4 > now)
+                                                {
+                                                    Console.WriteLine("Su saldo es $" + saldo4);
+                                                }
+                                                else
+                                                {
+                                                    Console.WriteLine("Su plástico ha vencido, pase a ventanilla para obtener uno nuevo");
+                                                }
+                                            }
+                                            else
+                                            {
+                                                Console.WriteLine("ERROR");
+                                            }
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine("ERROR");
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("ERROR");
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
